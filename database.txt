@@ -1,0 +1,8 @@
+
+CREATE TABLE protodb.categories
+(cat_id INT NOT NULL AUTO_INCREMENT,
+cat_name VARCHAR(50) NOT NULL,
+cat_desc TEXT NOT NULL,
+cat_image VARCHAR(100) NOT NULL,
+PRIMARY KEY(cat_id));
+
