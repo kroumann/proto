@@ -53,7 +53,6 @@ public class ProductPanel extends JPanel {
         } else if (type == ProductType.STOCK) {
             createStockItem();
         }
-
     }
 
     void createStockItem() {
