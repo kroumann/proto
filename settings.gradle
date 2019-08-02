@@ -9,3 +9,4 @@
 
 rootProject.name = 'proto'
 include 'server'
+include 'gs-rest-service'
