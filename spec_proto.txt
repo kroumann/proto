@@ -1,0 +1,79 @@
+Online shopping managment
+spec client:
+- Pas besoin d'etre membre pour voir les produits
+- Details des commandes passées par les clients sont visibles
+    par l'administrateur et les employés
+- Parcourir les produits sans payer
+- Pour acherter il faut être membre ou etre connecter
+
+Compte:
+    Créer
+    Voir les infos
+    Modifier infos
+    Supprimer
+
+
+Produit:
+    Rechercher
+    Voir
+    Ajouter au caddy
+
+Commande:
+    Ajouter
+    Voir
+    Mettre à jour
+    Annuler
+
+Payment:
+    Verifier
+    Ajouter un moyen
+
+
+spec serveur:
+
+Produit:
+    Ajouter
+    Voir
+    Mettre à jour
+    Supprimer
+
+Stock:
+    Ajouter
+    Voir
+    Mettre à jour
+    Supprimer
+
+Commande:
+    Voir
+    Valider
+    Expedier
+    Annuler
+
+Payment:
+    Verifier
+    Recuperer
+
+Livraison:
+    Etat d'avancement
+    Rapport de Livraison
+
+Collaborateurs:
+    Ajouter
+    Voir
+    Mettre à jour
+    Supprimer
+
+
+front end: java Swing
+back end: HSQL, restful-service web
+
+
+
+Les tables de la BD:
+
+produit:
+    id:
+
+
+Pour wamp server:
+    Microsoft Visual C/C++ Redistributable (2008, 2010, 2013, 2015)
