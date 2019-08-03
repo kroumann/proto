@@ -22,6 +22,8 @@ application {
     mainClassName = 'server.Server'
 }
 
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8' 
+
 sourceSets {
 	main {
 		java {
