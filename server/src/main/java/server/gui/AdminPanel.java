@@ -128,16 +128,16 @@ public class AdminPanel extends JPanel {
         public void addItem(Category category) {
 
             JPanel catPanel = new JPanel(new BorderLayout());
-            catPanel.setBackground(new Color(202, 204, 206));
-            catPanel.setBorder(new EmptyBorder(10, 5, 10, 5));
-            catPanel.setPreferredSize(new Dimension(960, 80));
+            //catPanel.setBackground(new Color(202, 204, 206));
+            catPanel.setBorder(new EmptyBorder(10, 10, 10, 5));
+            catPanel.setPreferredSize(new Dimension(960, 165));
             catPanel.setMaximumSize(new Dimension(960, 110));
 
             JLabel catImage = new JLabel();
             try{
                 URL url = new URL(category.getImageUrl());
                 Image image = Toolkit.getDefaultToolkit().getImage(url);
-                Image newimg = image.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH); // resize it
+                Image newimg = image.getScaledInstance(180, 160,  java.awt.Image.SCALE_SMOOTH); // resize it
                 catImage.setIcon(new ImageIcon(newimg));
                 catPanel.add(catImage, BorderLayout.WEST);
                 //more code goes here
@@ -147,7 +147,7 @@ public class AdminPanel extends JPanel {
 
             JPanel catInfos = new JPanel(new BorderLayout());
             catInfos.setPreferredSize(new Dimension(80, 40));
-            catInfos.setBackground(new Color(235, 232, 217));
+            //catInfos.setBackground(new Color(235, 232, 217));
             catInfos.setBorder(new EmptyBorder(10, 5, 10, 5));
             catInfos.add (new JLabel("<html><h1>" + category.getName() + "</h1>" + category.getDescription() + "</html>"),  BorderLayout.NORTH);
             catPanel.add(catInfos, BorderLayout.CENTER);
