@@ -16,6 +16,8 @@ import server.gui.*;
     private StocksPanel stocksPanel;
     private ComptaPanel comptaPanel;
 
+    private AdminControls adminControls;
+
     public LoginControls(LoginPanel loginPanel,  ServerUI serverUI) {
         this.loginPanel = loginPanel;
         this.serverUI = serverUI;
@@ -36,7 +38,8 @@ import server.gui.*;
             if (userText.equalsIgnoreCase("admin") && pwdText.equalsIgnoreCase("admin")) {
                 adminPanel = new AdminPanel();
                 serverUI.addTabbedPane("Admin", adminPanel, "Server Administration pane");
-                AdminControls adminControls = new AdminControls(adminPanel, serverUI);
+                adminControls = new AdminControls(adminPanel, serverUI);
+                
                 commandsPanel = new CommandsPanel();
                 serverUI.addTabbedPane("Commands", commandsPanel, "client cart details");
                 stocksPanel = new StocksPanel();

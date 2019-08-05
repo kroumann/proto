@@ -29,9 +29,9 @@ import server.controls.*;
  */
 
 public class Server {
-    private ServerUI serverUI;
-    private LoginPanel loginPanel;
-    private LoginControls loginControls;
+    private static ServerUI serverUI;
+    private static LoginPanel loginPanel;
+    private static LoginControls loginControls;
 
     public Server(String title) {
         serverUI = new ServerUI(title);
@@ -55,10 +55,9 @@ public class Server {
 
 
     public static void main(String args[]) {
-        ServerUI serverUI = new ServerUI("Prototype Interface Serveur");
-        LoginPanel loginPanel = new LoginPanel();
-        LoginControls loginControls = new LoginControls(loginPanel, serverUI);
-        //serverUI.addTabbedPane("Admin", loginPanel, "Connexion administration serveur");
+        serverUI = new ServerUI("Prototype Interface Serveur");
+        loginPanel = new LoginPanel();
+        loginControls = new LoginControls(loginPanel, serverUI);
         
 
         //Schedule a job for the event dispatch thread:

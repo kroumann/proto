@@ -20,22 +20,23 @@ public class AdminControls {
 
 
 
-class PopUpMenu extends JPopupMenu {
-    JMenuItem newItem;
-    JMenuItem editItem;
-    JMenuItem deleteItem;
 
-    public PopUpMenu() {
-        newItem = new JMenuItem("Nouveau");
-        add(newItem);
+    class PopUpMenu extends JPopupMenu {
+        JMenuItem newItem;
+        JMenuItem editItem;
+        JMenuItem deleteItem;
 
-        editItem = new JMenuItem("Modifier");
-        add(editItem);
+        public PopUpMenu() {
+            newItem = new JMenuItem("Nouveau");
+            add(newItem);
 
-        deleteItem = new JMenuItem("Supprimer");
-        add(deleteItem);
+            editItem = new JMenuItem("Modifier");
+            add(editItem);
+
+            deleteItem = new JMenuItem("Supprimer");
+            add(deleteItem);
+        }
     }
-}
 
 class PopClickListener extends MouseAdapter {
     public void mousePressed(MouseEvent e) {
