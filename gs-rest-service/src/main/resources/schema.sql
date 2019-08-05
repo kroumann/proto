@@ -8,7 +8,7 @@ CREATE TABLE category(
   imageurl      VARCHAR(100)
 );
 
-DROP TABLE IF EXISTS produits;
-CREATE TABLE produits(
-  id            INT PRIMARY KEY AUTO_INCREMENT,
-);
+-- DROP TABLE IF EXISTS produits;
+-- CREATE TABLE produits(
+--  id            INT PRIMARY KEY AUTO_INCREMENT,
+-- );
