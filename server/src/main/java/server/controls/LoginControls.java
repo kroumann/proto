@@ -3,6 +3,7 @@ package server.controls;
 import java.awt.event.*;
 import javax.swing.*;
 
+import server.controls.ServerUIControls;
 import server.gui.*;
 
 
@@ -11,6 +12,7 @@ import server.gui.*;
 
     private LoginPanel loginPanel;
     private ServerUI serverUI;
+    private ServerUIControls serverUIControls;
     private AdminPanel adminPanel;
     private CommandsPanel commandsPanel;
     private StocksPanel stocksPanel;
@@ -18,35 +20,25 @@ import server.gui.*;
 
     private AdminControls adminControls;
 
-    public LoginControls(LoginPanel loginPanel,  ServerUI serverUI) {
+    public LoginControls(LoginPanel loginPanel, ServerUI serverUI, ServerUIControls serverUIControls) {
         this.loginPanel = loginPanel;
         this.serverUI = serverUI;
+        this.serverUIControls = serverUIControls;
         loginPanel.addLoginListener(new LoginButtonListener());
         loginPanel.addResetListener(new ResetBtnListener());
         loginPanel.addCheckBoxListener(new CheckBoxListener());
-        serverUI.addPane(loginPanel);
-        serverUI.viewRefresh();
     }
 
     class LoginButtonListener implements ActionListener {
-    
+
         public void actionPerformed(ActionEvent a) {
             String userText;
             String pwdText;
             userText = loginPanel.getUserName();
             pwdText = new String(loginPanel.getUserPassword());
+
             if (userText.equalsIgnoreCase("admin") && pwdText.equalsIgnoreCase("admin")) {
-                adminPanel = new AdminPanel();
-                serverUI.addTabbedPane("Admin", adminPanel, "Server Administration pane");
-                adminControls = new AdminControls(adminPanel, serverUI);
-                
-                commandsPanel = new CommandsPanel();
-                serverUI.addTabbedPane("Commands", commandsPanel, "client cart details");
-                stocksPanel = new StocksPanel();
-                serverUI.addTabbedPane("Stocks", stocksPanel, "Store stocks management");
-                comptaPanel = new ComptaPanel();
-                serverUI.addTabbedPane("Compta", comptaPanel, "Store Comptability management");
-                //JOptionPane.showMessageDialog(serverUI, "Login Successful");
+                serverUIControls.loginGranted();
             } else {
                 JOptionPane.showMessageDialog(serverUI, "Invalid Username or Password");
             }

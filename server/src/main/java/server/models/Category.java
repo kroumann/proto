@@ -5,16 +5,22 @@ import java.util.*;
 
 public class Category {
 
+    private int id;
     private String name;
     private String description;
     private String imageurl;
 
     protected  Category() {}
 
-    public Category(String name, String description, String imageUrl) {
+    public Category(int id, String name, String description, String imageUrl) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.imageurl = imageUrl;
+    }
+
+    public int getID() {
+        return id;
     }
 
     public String getName() {
@@ -27,6 +33,10 @@ public class Category {
 
     public String getImageUrl() {
         return imageurl;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setName(String name) {

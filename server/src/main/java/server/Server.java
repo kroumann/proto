@@ -30,17 +30,18 @@ import server.controls.*;
 
 public class Server {
     private static ServerUI serverUI;
-    private static LoginPanel loginPanel;
-    private static LoginControls loginControls;
+    private static ServerUIControls serverUIControls;
+    //private static LoginPanel loginPanel;
+    //private static LoginControls loginControls;
 
     public Server(String title) {
         serverUI = new ServerUI(title);
-        loginPanel = new LoginPanel();
-        
+        //loginPanel = new LoginPanel();
+
 
         //loginPanel.setTitle("Login Form");
         //serverUI.addTabbedPane("Admin", loginPanel, "Connexion administration serveur");
-        serverUI.addPane(loginPanel);
+        //serverUI.addPane(loginPanel);
     }
 
     public void start() {
@@ -56,9 +57,10 @@ public class Server {
 
     public static void main(String args[]) {
         serverUI = new ServerUI("Prototype Interface Serveur");
-        loginPanel = new LoginPanel();
-        loginControls = new LoginControls(loginPanel, serverUI);
-        
+        serverUIControls = new ServerUIControls(serverUI);
+        //loginPanel = new LoginPanel();
+        //loginControls = new LoginControls(loginPanel, serverUI);
+
 
         //Schedule a job for the event dispatch thread:
         //creating and showing this application's GUI.

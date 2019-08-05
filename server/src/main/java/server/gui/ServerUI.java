@@ -68,7 +68,7 @@ public class ServerUI extends JFrame {
                 "Informations serveur transactions et errors");
                 tabbedPane.setMnemonicAt(1, KeyEvent.VK_2);
 
-        
+
 
         //! panneau de gauche pour les infos clients, droite pour les details
         JSplitPane splitPane =  new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, clientInfos, tabbedPane);
@@ -120,71 +120,4 @@ public class ServerUI extends JFrame {
         setVisible(true);
     }
 
-
-    /**
-     * Create the GUI and show it.  For thread safety,
-     * this method should be invoked from
-     * the event dispatch thread.
-     */
-
-     /*
-
-
-    private static void createAndShowGUI(String title) {
-        //Create and set up the window.
-        JFrame frame = new JFrame(title);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setMinimumSize(new Dimension(960 , 640));
-
-        // menu bar
-        JMenuBar menuBar = new JMenuBar();
-
-        JMenu mnuFile = new JMenu( "File" );
-        JMenu mnuHelp = new JMenu("Help");
-
-        JMenuItem mnuExit = new JMenuItem( "Exit" );
-
-        mnuFile.add(mnuExit);
-
-        // add items to menu bar
-        menuBar.add(mnuFile);
-        menuBar.add(mnuHelp);
-
-        frame.setJMenuBar(menuBar);
-
-        //Add content to the window.
-        frame.add(new ServerUI(), BorderLayout.CENTER);
-
-        //Display the window.
-        frame.pack();
-        frame.setVisible(true);
-    }
-
-    public void runServerUI(String sName) {
-                //Schedule a job for the event dispatch thread:
-        //creating and showing this application's GUI.
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                //Turn off metal's use of bold fonts
-        UIManager.put("swing.boldMetal", Boolean.FALSE);
-        createAndShowGUI(sName);
-            }
-        });
-    }
-
-
-    public static void main(String args[]){
-
-        //Schedule a job for the event dispatch thread:
-        //creating and showing this application's GUI.
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                //Turn off metal's use of bold fonts
-        UIManager.put("swing.boldMetal", Boolean.FALSE);
-        createAndShowGUI("Serveur");
-            }
-        });
-    }
-
-    */
 }
