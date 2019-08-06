@@ -50,4 +50,19 @@ public class Category {
     public void setImageUrl(String imageUrl) {
         this.imageurl = imageUrl;
     }
+
+
+    @Override
+    public boolean equals(Object obj){
+        boolean isEqual = false;
+        if (obj != null && obj instanceof Category) {
+            isEqual = (this.id == ((Category)obj).id);
+        }
+        return isEqual;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.id;
+    }
 }

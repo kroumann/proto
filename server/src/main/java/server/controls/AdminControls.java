@@ -6,6 +6,7 @@ import javax.swing.event.*;
 import java.util.List;
 import java.util.Arrays;
 import javax.swing.event.ChangeListener;
+import java.awt.*;
 
 
 import org.apache.http.HttpResponse;
@@ -34,6 +35,12 @@ public class AdminControls {
         this.serverUI = serverUI;
         this.serverUIControls = serverUIControls;
         this.adminPanel.addMarchandisesPaneListener(new MarchandisesPaneChangeListener());
+
+        this.adminPanel.addNewAbstractAction(new newACategoryAbstractAction());
+        // show default data
+        this.adminPanel.addCategories(getCategories());
+        this.adminPanel.showItems();
+        this.serverUI.viewRefresh();
     }
     class MarchandisesPaneChangeListener  implements ChangeListener {
 
@@ -44,7 +51,7 @@ public class AdminControls {
                 for (Category cat : getCategories()) {
                     adminPanel.addNewCategoryPanel(cat);
                 }
-                adminPanel.showItems();
+                //adminPanel.showItems();
                 break;
                 case 1: // Products
 
@@ -56,40 +63,6 @@ public class AdminControls {
         }
     }
 
-
-    class PopUpMenu extends JPopupMenu {
-        JMenuItem newItem;
-        JMenuItem editItem;
-        JMenuItem deleteItem;
-
-        public PopUpMenu() {
-            newItem = new JMenuItem("Nouveau");
-            add(newItem);
-
-            editItem = new JMenuItem("Modifier");
-            add(editItem);
-
-            deleteItem = new JMenuItem("Supprimer");
-            add(deleteItem);
-        }
-    }
-
-    class PopClickListener extends MouseAdapter {
-        public void mousePressed(MouseEvent e) {
-            if (e.isPopupTrigger())
-                doPop(e);
-        }
-
-        public void mouseReleased(MouseEvent e) {
-            if (e.isPopupTrigger())
-                doPop(e);
-        }
-
-        private void doPop(MouseEvent e) {
-                PopUpMenu menu = new PopUpMenu();
-            menu.show(e.getComponent(), e.getX(), e.getY());
-        }
-    }
 
     private List<Category> getCategories() {
 
@@ -122,41 +95,36 @@ public class AdminControls {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-        /*
-        try
-        {
-            //Define a HttpGet request; You can choose between HttpPost, HttpDelete or HttpPut also.
-            //Choice depends on type of method you will be invoking.
-            HttpGet getRequest = new HttpGet(request);
-
-            // Set the API media type in http accept header
-            getRequest.addHeader("accept", "application/json");
-
-            //Send the request; It will immediately return the response in HttpResponse object
-            HttpResponse response = httpClient.execute(getRequest);
-
-
-            // Verify valid error code first
-            if (response.getStatusLine().getStatusCode() != 200) {
-                throw new RuntimeException("Failed : HTTP error code : "
-                    + response.getStatusLine().getStatusCode());
-            }
-
-            ObjectMapper mapper = new ObjectMapper();
-
-            categories = Arrays.asList(mapper.readValue(response.getEntity().getContent(), Category[].class));
-
-            // shutdown the connection when done
-            httpClient.getConnectionManager().shutdown();
-        }
-        catch(ClientProtocolException e)
-        {
-            e.printStackTrace();
-        }
-*/
         return categories;
+    }
+
+    class newACategoryAbstractAction extends AbstractAction {
+        private JTextField nmField;
+        private JTextField urlField;
+        private JTextArea description;
+        JPanel panel;
+
+        newACategoryAbstractAction() {
+            super("New Category");
+            nmField = new JTextField(20);
+            urlField = new JTextField(20);
+            description = new JTextArea();
+            description.setBounds(10, 10, 10, 10);
+
+            panel = new JPanel(new GridLayout(3, 1));
+
+            panel.add(nmField);
+            panel.add(urlField);
+            panel.add(description);
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            int res = JOptionPane.showConfirmDialog(null, panel, "New Category", JOptionPane.OK_CANCEL_OPTION);
+            if (res == JOptionPane.OK_OPTION) {
+
+            }
+        }
     }
 
 }

@@ -23,7 +23,15 @@ application {
     mainClassName = 'server.Server'
 }
 
-[compileJava, compileTestJava]*.options*.encoding = 'UTF-8' 
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+// processResources {
+//	expand(application.properties)
+// }
+
+//    filesMatching('application.properties') {
+//        expand(project.properties)
+//    }
 
 sourceSets {
 	main {
@@ -34,7 +42,6 @@ sourceSets {
 	    }
 		resources {
 			srcDir 'images'
-
 		}
 	}
 
