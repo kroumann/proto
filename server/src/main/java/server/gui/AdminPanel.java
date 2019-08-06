@@ -6,7 +6,9 @@ import javax.swing.border.*;
 import java.net.*;
 import java.awt.Toolkit;
 import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.*;
+import javax.imageio.ImageIO;
 
 import server.gui.WrapLayout;
 import server.models.Category;
@@ -134,13 +136,22 @@ public class AdminPanel extends JPanel {
             catPanel.setMaximumSize(new Dimension(960, 110));
 
             JLabel catImage = new JLabel();
-            try{
+          /*  try {
                 URL url = new URL(category.getImageUrl());
+                final BufferedImage image = resize(url, new Dimension(180, 160));
+                catImage.setIcon(new ImageIcon(image));
+                catPanel.add(catImage, BorderLayout.WEST);
+            } catch (Exception e) {
+                e.printStackTrace();
+            } */
+            
+            try{
+                URL url = getClass().getResource("resources/images/gliphy.gif"); //new URL(category.getImageUrl());
                 Image image = Toolkit.getDefaultToolkit().getImage(url);
                 Image newimg = image.getScaledInstance(180, 160,  java.awt.Image.SCALE_SMOOTH); // resize it
                 catImage.setIcon(new ImageIcon(newimg));
                 catPanel.add(catImage, BorderLayout.WEST);
-                //more code goes here
+                new ImageWorker(new URL(category.getImageUrl()), catImage).execute();
             }catch(Exception ex){
                 ex.printStackTrace();
             }
@@ -153,50 +164,41 @@ public class AdminPanel extends JPanel {
             catPanel.add(catInfos, BorderLayout.CENTER);
 
             imagesPane.add(catPanel, BorderLayout.CENTER);
-            //imagesPane.revalidate();
-
-/**
- JPanel product = new JPanel(new BorderLayout());
-            //product.setName("Bananas");
-            product.setBackground(new Color(202, 204, 206));
-            product.setBorder(new EmptyBorder(10, 5, 10, 5));
-            product.setPreferredSize(new Dimension(960, 80));
-            product.setMaximumSize(new Dimension(960, 110));
-
-            JLabel image = new JLabel();
-            //image.setIcon(new ImageIcon("img//" + "Bananas" + ".png"));
-            image.setToolTipText("<HTml>"+"Bananas"+"<br> " + "This is a banana description in this field please make it loooonnnnggggggg </html>");
-
-            product.add(image, BorderLayout.WEST);
-            //product.add(new JLabel("Bananas"), BorderLayout.NORTH);
-
-            JPanel productInfos = new JPanel(new BorderLayout());
-            productInfos.setPreferredSize(new Dimension(80, 40));
-            productInfos.setBackground(new Color(235, 232, 217));
-            productInfos.setBorder(new EmptyBorder(10, 5, 10, 5));
-            productInfos.add (new JLabel("<html><h1>Beetles</h1> Product short description lines for user view</html>"),  BorderLayout.NORTH);
-            product.add(productInfos, BorderLayout.CENTER);
-
-            JPanel checkout = new JPanel(new GridLayout(3, 1));
-            JLabel checkoutInfo = new JLabel("<html><h3> In Stock </h3></html>", SwingConstants.CENTER);
-            JLabel checkoutValue = new JLabel("<html><h2> 250 </h2></html>", SwingConstants.CENTER);
-            checkout.setBackground(new Color(235, 232, 217));
-            QuantityPanel quantityPanel = new QuantityPanel();
-            checkout.setPreferredSize(new Dimension(160, 10));
-            checkout.add(checkoutInfo);
-            checkout.add(checkoutValue);
-            checkout.add(quantityPanel);
-
- */
-
-
-
         }
 
         public void showPanel() {
             leftCatPane.add(imagesPane, BorderLayout.CENTER);
         }
 
+
+        class ImageWorker extends SwingWorker<ImageIcon, Void>{
+
+            URL imageURL;
+            ImageIcon imageIcon;
+            JLabel imageLabel;
+            
+            public ImageWorker(URL imageURL, JLabel imageLabel){
+                this.imageURL = imageURL;
+                this.imageLabel = imageLabel;
+            }
+            
+            @Override
+            protected ImageIcon doInBackground() throws Exception {
+                imageIcon = new ImageIcon(imageURL);
+                Image rawimageIcon = imageIcon.getImage();
+                Image newimg = rawimageIcon.getScaledInstance(180, 160,  java.awt.Image.SCALE_SMOOTH);
+                imageIcon = new ImageIcon(newimg);
+                return imageIcon;
+            }
+            
+            @Override
+            protected void done() {
+                // leave as default zagg shield icon if no brand icon is returned by api
+                if (imageIcon.getIconWidth() == 32 && imageIcon.getIconHeight() == 32) {
+                    imageLabel.setIcon(imageIcon);
+                }
+              }
+            }
     }
 
 }
