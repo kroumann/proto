@@ -146,8 +146,8 @@ public class AdminPanel extends JPanel {
             } */
             
             try{
-                URL url = getClass().getResource("resources/images/gliphy.gif"); //new URL(category.getImageUrl());
-                Image image = Toolkit.getDefaultToolkit().getImage(url);
+                // URL url = this.getClass().getClassLoader().getResource("resources/main/images/gliphy.gif"); //new URL(category.getImageUrl());
+                Image image = ImageIO.read(this.getClass().getClassLoader().getResource("resources/images/gliphy.gif")); //Toolkit.getDefaultToolkit().getImage(url);
                 Image newimg = image.getScaledInstance(180, 160,  java.awt.Image.SCALE_SMOOTH); // resize it
                 catImage.setIcon(new ImageIcon(newimg));
                 catPanel.add(catImage, BorderLayout.WEST);
