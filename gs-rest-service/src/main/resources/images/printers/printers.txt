@@ -1,0 +1,111 @@
+Pixma Ts5050black MFP
+Imprimante multifonction
+La vitesse de numérisation peut varier selon la configuration du système, l'interface, le logiciel, les paramètres de numérisation, la taille des documents, etc.
+La vitesse de copie peut varier selon la complexité du document, le mode de copie, la couverture par page, le type de papier utilisé, etc. Elle ne tient pas compte du temps de préchauffage.
+1. La vitesse d'impression de documents A4 sur papier ordinaire est mesurée selon la moyenne de l'ESAT conformément aux normes de test catégorie bureau ISO/IEC 24734.
+Dimensions du produit : 372 mm x 126 mm x 315 mm
+Protocole d'interface : IEEE 802.11b/g/n (2.4GHz band)
+Système d'exploitation : Windows 10, 8.1 (mise à jour), 8, 7, Vista SP2 (pour Windows, .NET Framework 4.5.2 ou 4.6 est requis) et Mac OS X v10.8.5 - OS X v10.11
+
+HP Deskjet 2634
+
+Imprimante Multifonction Jet d'encre Couleur (7,5 ppm, 4800 x 1200 PPP, WiFi, Impression Mobile, USB)
+
+Fonctions : Impression, Scan, Photocopie
+Vitesse et Résolution d'impression : 7,5 ppm noir et blanc, 5,5 ppm couleur; 4800 x 1200 ppp
+Vitesse de sortie de la première page : 14s noir, 18s couleur
+Taux d'utilisation mensuel : Jusqu'à 1 000 pages
+Cartouches éligibles : HP 304/304XL cartouche d'encre trois couleurs, HP 304/304XL cartouche d'encre noire, imprimante éligible au service HP Instant Ink
+Connectivité : Wifi, Wifi Direct, USB, Impression Mobile (ePrint)
+
+Brother MFC-L2710DW
+
+Imprimante Multifonction 4 en 1 Laser - Monochrome - A4 - Impression Recto-verso, Numérisation, Copie, Télécopie - Airprint
+
+ Vitesse d’impression jusqu’à 30 pages par minute. Résolution de numérisation optique (dpi max.): 1200 x 1200 dpi (à plat), 600 x 600 dpi (ADF)
+Impression recto-verso automatique
+Bac papier de 250 feuilles
+Chargeur automatique de documents de 50 feuilles
+Connectivités réseau Ethernet, WiFi et WiFi Direct
+Toner de démarrage de 700 pages (Capacité déclarée en conformité avec la norme ISO/IEC19752)
+
+HP Officejet 3833
+
+Imprimante Multifonction jet d'encre couleur (8,5 ppm, 4800 x 1200 ppp, USB, Wifi, Fax, Instant Ink)
+
+Fonctions : Impression, Scan, Photocopie, Fax
+Vitesse et Résolution d'impression : 8,5 ppm noir et blanc, 6 ppm couleur; 4800 x 1200 ppp
+Vitesse de sortie de la première page : 14s noir, 17s couleur
+Taux d’utilisation mensuel : Jusqu'à 1 000 pages
+Cartouches éligibles : HP 302/302XL cartouche d'encre trois couleurs, HP 302/302XL cartouche d'encre noire, imprimante éligible au service HP Instant Ink
+Connectivité : Wifi, Wifi Direct, USB, Impression Mobile (ePrint)
+Vitesse du processeur: 180 MHz
+Systèmes d'exploitation supportés: Windows 10, Windows 8.1, Windows 8, Windows 7, Mac OS X v10.8 Mountain Lion, OS X v10.9 Mavericks, OS X v10.10 Yosemite
+
+HP Envy Photo 7830
+
+Imprimante Multifonction jet d'encre couleur (15ppm, 4800 x 1200 ppp, USB, Wifi, Instant Ink)
+
+ Fonctions : Impression, Scan, Photocopie, Fax
+Vitesse et Résolution d'impression : 15 ppm noir et blanc, 10 ppm couleur; 4800 x 1200 ppp
+Ecran : Ecran 6,75 cm couleur avec fonction d'écran tactile
+Impression recto-verso : Automatique. Cycle d'utilisation mensuel (maxi) : 1000 pages
+Cartouches éligibles : HP 303/303XL cartouche d'encre trois couleurs, HP 303/303XL cartouche d'encre noire, imprimante éligible au service HP Instant Ink
+Connectivité : Wifi, Wifi Direct, USB, Fax, Impression Mobile (ePrint)
+
+HP Officejet Pro 8720
+
+Imprimante Multifonctions
+
+ HP - D9L19A
+HP Officejet Pro 8720 All-in-One
+Imprimante multifonctions - couleur
+jet d'encre - Legal (216 x 356 mm) (original)
+A4/Legal (support)
+jusqu'à 37 ppm (copie)
+jusqu'à 37 ppm (impression)
+250 feuilles
+USB 2.0, LAN, Wi-Fi(n), hôte USB, NFC
+
+Brother MFC-J5330DW
+
+Imprimante Multifonction 4 en 1 Jet d'Encre Pro - Business Smart - A3 - Imprimession Recto-verso Automatique- Airprint
+
+Imprimez en recto-verso jusqu'au format A4
+Imprimez jusqu'au format A3 via l'introducteur manuel
+N'attendez plus après vos documents grâce à un temps de sortie de la première page de 6 secondes
+Faites des économies grâce aux cartouches d'encre pigmentée haute capacité
+Garantie standard : 2 ans échange sur site
+Connexion Ethernet et Wifi
+Ecran LCD couleur tactile de 6,8 cm
+
+HP Officejet Pro 7720
+
+Imprimante multifonctions A3 Jet d'encre (22ppm, 4800x1200 ppp, Wifi/Ethernet/USB)
+
+
+HP Officejet Pro 7720 Wide Format AiO. Technologie d'impression: A jet d'encre thermique. Température de fonctionnement: 5°C à 40°C. Plage d'humidité en fonctionnement: 10 - 80%
+Impression: Impression couleur. Résolution maximale: 4800 x 1200 DPI
+Vitesse d'impression (couleur
+qualité normale
+A4/US LETTER): 18 ppm. Copier: Copie couleur. Résolution max. des copies: 600 x 600 DPI. Numérisation: Numérisation couleur. Résolution de numérisation optique: 1200 x 1200 DPI. Télécopier: Télécopie couleur
+Fonctions recto verso: Impression. Taille de papier de série A ISO maximum: A3. Capacité d'entrée standard: 250 feuilles. Capacité de sortie standard: 75 feuilles. Wifi. Impression directe
+
+Brother DCP-J572DW
+
+Imprimante multifonction 3 en 1 Jet d'encre|couleur | A4 |Impression recto-verso automatique |Ecran LCD couleur 4,5cm|Wi-Fi
+
+ Impression, copie et scan
+Jusqu'à 12 ppm en N&B / 6 ppm en couleur
+Impression recto-verso automatique
+Connectivités WiFi et Cloud
+Facile à installer et simple à utiliser
+
+
+Epson Workforce WF-2630WF
+
+Imprimante Multifonction Jet d'encre pour Windows 8/Mac OS X
+
+jet d'encre
+impression couleur
+4,7 ppm

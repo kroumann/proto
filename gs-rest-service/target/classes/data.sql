@@ -1,0 +1,11 @@
+INSERT INTO `categories` VALUES (1,'Téléphones','Téléphones portables haut de gamme','https://gdurl.com/Rv11'),
+                                (2,'Tablettes','Tablettes les plus recherchées sur le marché, appareils hauts de gamme','https://gdurl.com/nRRN'),
+                                (3,'Services et Reparations','Services proposés par notre centre agrée par les plus grands fabricants du monde.','https://gdurl.com/PwJM'),
+                                (4,'Imprimantes et Consommables','Imprimantes multifonctions et consommables associés','https://gdurl.com/pgWP'),
+                                (5,'Composants','Composants matériels pour mise à niveau et amélioration de performances de vos ordinateurs.','https://gdurl.com/krU5'),
+                                (6,'Écrans ou moniteurs d\'ordinateurs','Écrans de PC bureautiques pour tous les goûts (jeux, développement, design...)','https://gdurl.com/OHfy'),
+                                (7,'Les mini ordinateurs','PC avec un budget sur mesure et entièrement adapter à vos besoins','https://gdurl.com/NedR'),
+                                (8,'Logiciels et Outils','Logiciels et outils pour faciliter vos travaux de développement et études','https://gdurl.com/hlB9'),
+                                (9,'Ordinateurs Portables','Ordinateurs portables pré-configurer pour toutes sortes d\'utilisation','https://gdurl.com/jwbQ'),
+                                (10,'Ordinateurs Bureautiques','Catégories des Ordinateurs bureautiques pour les entreprises et utilisateurs en quête de puissance','https://gdurl.com/dnOg'),
+                                (11,'Télévisions','TV et Smart TV dernière génération de toutes les tailles et de resolutions','https://gdurl.com/qivw');

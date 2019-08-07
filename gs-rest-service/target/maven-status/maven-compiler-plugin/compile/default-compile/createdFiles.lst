@@ -1,0 +1,6 @@
+proto/models/Category.class
+proto/hello/GreetingController.class
+proto/controllers/CategoryController.class
+proto/hello/Greeting.class
+proto/repositories/CategoryRepository.class
+proto/Application.class
