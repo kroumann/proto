@@ -21,6 +21,10 @@ import server.models.Category;
 
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.text.html.HTMLEditorKit;
+import javax.swing.text.html.StyleSheet;
+import javax.swing.JEditorPane;
+import javax.swing.text.Document;
 
 
 
@@ -162,12 +166,39 @@ public class AdminPanel extends JPanel {
                 }catch(Exception ex){
                     ex.printStackTrace();
                 }
+                
+                System.out.println("Donnee brute:" + category.getName() + ", " + category.getDescription() );
 
                 JPanel catInfos = new JPanel(new BorderLayout());
                 catInfos.setPreferredSize(new Dimension(80, 40));
                 //catInfos.setBackground(new Color(235, 232, 217));
                 catInfos.setBorder(new EmptyBorder(10, 5, 10, 5));
-                catInfos.add (new JLabel("<html><h1>" + category.getName() + "</h1>" + category.getDescription() + "</html>"),  BorderLayout.NORTH);
+                JTextPane info = new JTextPane();
+                info.setEditable(false);
+                info.setContentType("text/html;charset=UTF-8");
+                info.setText(category.getName());
+                //info.append(category.getDescription());
+                catInfos.add (info,  BorderLayout.CENTER);
+                //catInfos.add (new JLabel(String.format("<html><head><meta charset='UTF-8'></head></head><body><h1>%s</h1>%s</body></html>", category.getName(), category.getDescription())),  BorderLayout.NORTH);
+
+
+                /*JEditorPane infoPane = new JTextPane();
+                infoPane.setEditable(false);
+                infoPane.setContentType("text/html;charset=UTF-8");
+                infoPane.setPreferredSize(new Dimension(80, 40));
+                    "<html><span style='font-size:20px'>"+Text+"</span></html>"
+                HTMLEditorKit kit = new HTMLEditorKit();
+                StyleSheet styleSheet = kit.getStyleSheet();
+                styleSheet.addRule("h1 {color: blue;}");
+                styleSheet.addRule("pre {font : 10px monaco; color : black; background-color : #fafafa; }");
+                    <meta charset="UTF-8">
+                String info = String.format("<html><h1>%s</h1>%s</html>", category.getName(), category.getDescription());
+
+                Document doc = kit.createDefaultDocument();
+                infoPane.setDocument(doc);
+                infoPane.setText(info);
+                catPanel.add(infoPane, BorderLayout.CENTER);*/
+
                 catPanel.add(catInfos, BorderLayout.CENTER);
 
                 imagesPane.add(catPanel, BorderLayout.CENTER);

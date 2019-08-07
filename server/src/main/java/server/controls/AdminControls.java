@@ -76,7 +76,7 @@ public class AdminControls {
             HttpGet getRequest = new HttpGet(request);
 
             // Set the API media type in http accept header
-            getRequest.addHeader("accept", "application/json");
+            getRequest.addHeader("accept", "application/json; charset=UTF-8");
 
             //Send the request; It will immediately return the response in HttpResponse object
             HttpResponse response = httpClient.execute(getRequest);
