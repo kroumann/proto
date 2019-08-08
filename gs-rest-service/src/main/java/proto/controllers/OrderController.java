@@ -1,8 +1,8 @@
-package net.vatri.ecommerce.controllers;
+package proto.controllers;
 
-import net.vatri.ecommerce.hateoas.OrderResource;
-import net.vatri.ecommerce.models.Order;
-import net.vatri.ecommerce.services.EcommerceService;
+import proto.hateoas.OrderResource;
+import proto.models.Order;
+import proto.services.EcommerceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Validator;
 import org.springframework.web.bind.WebDataBinder;

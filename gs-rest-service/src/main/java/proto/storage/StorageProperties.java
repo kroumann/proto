@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.storage;
+package proto.storage;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

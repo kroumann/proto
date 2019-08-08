@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.controllers;
+package proto.controllers;
 
 import org.springframework.hateoas.Link;
 

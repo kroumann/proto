@@ -1,9 +1,9 @@
-package net.vatri.ecommerce.controllers;
+package proto.controllers;
 
-import net.vatri.ecommerce.cart.CartItem;
-import net.vatri.ecommerce.cart.CartService;
-import net.vatri.ecommerce.hateoas.OrderResource;
-import net.vatri.ecommerce.models.Order;
+import proto.cart.CartItem;
+import proto.cart.CartService;
+import proto.hateoas.OrderResource;
+import proto.models.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Link;
 import org.springframework.web.bind.WebDataBinder;

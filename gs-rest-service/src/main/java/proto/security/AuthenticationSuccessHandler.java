@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.security;
+package proto.security;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

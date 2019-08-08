@@ -16,11 +16,16 @@ alter table sales_orders drop foreign key fk_session_sales_order ;
 -- get_view_drop
 
 -- get_schema_drop
+drop table if exists category;
 drop table if exists users;
+drop table if exists product_images
+drop table if exists product_groups
+drop table if exists products;
+drop table if exists order_items
 drop table if exists roles;
 drop table if exists user_roles;
 drop table if exists categories;
-drop table if exists products;
+
 drop table if exists tags;
 drop table if exists sales_orders;
 drop table if exists coupons;
@@ -186,3 +191,4 @@ create table order_products (
 alter table sales_orders add constraint fk_session_sales_order
     foreign key (session_id)
     references sessions (id) ;
+

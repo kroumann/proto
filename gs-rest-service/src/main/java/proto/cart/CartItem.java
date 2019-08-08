@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.cart;
+package proto.cart;
 
 public class CartItem {
 

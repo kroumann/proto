@@ -1,8 +1,8 @@
-package net.vatri.ecommerce.hateoas;
+package proto.hateoas;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import net.vatri.ecommerce.models.GroupVariant;
-import net.vatri.ecommerce.models.ProductGroup;
+import proto.models.GroupVariant;
+import proto.models.ProductGroup;
 import org.springframework.hateoas.ResourceSupport;
 
 import java.util.List;

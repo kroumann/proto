@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.cache;
+package proto.cache;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import redis.clients.jedis.Jedis;

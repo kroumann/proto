@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.models;
+package proto.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;

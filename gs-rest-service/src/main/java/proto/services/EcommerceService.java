@@ -1,12 +1,12 @@
-package net.vatri.ecommerce.services;
+package proto.services;
 
-import net.vatri.ecommerce.models.Order;
-import net.vatri.ecommerce.models.Product;
-import net.vatri.ecommerce.models.ProductGroup;
-import net.vatri.ecommerce.models.ProductImage;
-import net.vatri.ecommerce.repositories.GroupRepository;
-import net.vatri.ecommerce.repositories.OrderRepository;
-import net.vatri.ecommerce.repositories.ProductRepository;
+import proto.models.Order;
+import proto.models.Product;
+import proto.models.ProductGroup;
+import proto.models.ProductImage;
+import proto.repositories.GroupRepository;
+import proto.repositories.OrderRepository;
+import proto.repositories.ProductRepository;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -35,13 +35,13 @@ public class EcommerceService {
 
     /* PRODUCT */
     public List<Product> getProducts(){
-        return productRepository.findAll();
+        return this.productRepository.findAll();
     }
     public Product getProduct(long id){
-        return productRepository.findOne(id);
+        return this.productRepository.getOne(id);
     }
     public Product saveProduct(Product product){
-        return productRepository.save(product);
+        return this.productRepository.save(product);
     }
 
     public String addProductImage(final String productId, final String filename){
@@ -71,7 +71,7 @@ public class EcommerceService {
         return groupRepository.findAll();
     }
     public ProductGroup getGroup(long id){
-        return groupRepository.findOne(id);
+        return groupRepository.getOne(id);
     }
     public ProductGroup saveGroup(ProductGroup group){
         return groupRepository.save(group);
@@ -79,10 +79,10 @@ public class EcommerceService {
 
     /* ORDERS */
     public List<Order> getOrders(){
-        return orderRepository.findAll();
+        return this.orderRepository.findAll();
     }
     public Order getOrder(long id){
-        return orderRepository.findOne(id);
+        return this.orderRepository.getOne(id);
     }
     public Order saveOrder(Order order){
         return orderRepository.save(order);

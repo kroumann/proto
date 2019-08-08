@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.cache;
+package proto.cache;
 
 import java.util.Collection;
 

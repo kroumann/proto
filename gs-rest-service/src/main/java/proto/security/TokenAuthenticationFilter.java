@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.security;
+package proto.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

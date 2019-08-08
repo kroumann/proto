@@ -1,9 +1,9 @@
-package net.vatri.ecommerce.services;
+package proto.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import net.vatri.ecommerce.cache.Cache;
-import net.vatri.ecommerce.models.User;
-import net.vatri.ecommerce.repositories.UserRepository;
+import proto.cache.Cache;
+import proto.models.User;
+import proto.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

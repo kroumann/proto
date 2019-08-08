@@ -1,6 +1,6 @@
-package net.vatri.ecommerce.validators;
+package proto.validators;
 
-import net.vatri.ecommerce.models.Order;
+import proto.models.Order;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;

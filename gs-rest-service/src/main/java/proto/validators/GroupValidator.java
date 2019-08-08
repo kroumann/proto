@@ -1,6 +1,6 @@
-package net.vatri.ecommerce.validators;
+package proto.validators;
 
-import net.vatri.ecommerce.models.ProductGroup;
+import proto.models.ProductGroup;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;

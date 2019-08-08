@@ -1,8 +1,8 @@
-package net.vatri.ecommerce.hateoas;
+package proto.hateoas;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import net.vatri.ecommerce.models.Order;
-import net.vatri.ecommerce.models.OrderItem;
+import proto.models.Order;
+import proto.models.OrderItem;
 import org.springframework.hateoas.ResourceSupport;
 
 import java.util.List;

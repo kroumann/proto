@@ -1,6 +1,6 @@
-package net.vatri.ecommerce.repositories;
+package proto.repositories;
 
-import net.vatri.ecommerce.models.ProductGroup;
+import proto.models.ProductGroup;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

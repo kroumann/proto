@@ -1,11 +1,11 @@
-package net.vatri.ecommerce.cart;
+package proto.cart;
 
-import net.vatri.ecommerce.cache.Cache;
-import net.vatri.ecommerce.models.GroupVariant;
-import net.vatri.ecommerce.models.Order;
-import net.vatri.ecommerce.models.OrderItem;
-import net.vatri.ecommerce.models.Product;
-import net.vatri.ecommerce.services.EcommerceService;
+import proto.cache.Cache;
+import proto.models.GroupVariant;
+import proto.models.Order;
+import proto.models.OrderItem;
+import proto.models.Product;
+import proto.services.EcommerceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

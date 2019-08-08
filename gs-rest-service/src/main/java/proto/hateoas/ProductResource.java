@@ -1,7 +1,7 @@
-package net.vatri.ecommerce.hateoas;
+package proto.hateoas;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import net.vatri.ecommerce.models.Product;
+import proto.models.Product;
 import org.springframework.hateoas.ResourceSupport;
 
 public class ProductResource extends ResourceSupport {

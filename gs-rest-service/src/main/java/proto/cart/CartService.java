@@ -1,7 +1,7 @@
-package net.vatri.ecommerce.cart;
+package proto.cart;
 
-import net.vatri.ecommerce.cart.CartItem;
-import net.vatri.ecommerce.models.Order;
+import proto.cart.CartItem;
+import proto.models.Order;
 
 import java.util.Set;
 

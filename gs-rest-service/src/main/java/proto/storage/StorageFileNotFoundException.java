@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.storage;
+package proto.storage;
 
 public class StorageFileNotFoundException extends StorageException {
 

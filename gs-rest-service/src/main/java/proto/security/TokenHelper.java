@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.security;
+package proto.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

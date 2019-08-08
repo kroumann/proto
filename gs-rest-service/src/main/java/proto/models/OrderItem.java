@@ -1,7 +1,7 @@
-package net.vatri.ecommerce.models;
+package proto.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import net.vatri.ecommerce.models.Product;
+import proto.models.Product;
 
 import javax.persistence.*;
 

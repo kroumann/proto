@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.security;
+package proto.security;
 
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 

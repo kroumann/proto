@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.storage;
+package proto.storage;
 
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;

@@ -1,6 +1,6 @@
-package net.vatri.ecommerce.repositories;
+package proto.repositories;
 
-import net.vatri.ecommerce.models.Order;
+import proto.models.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

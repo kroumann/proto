@@ -1,8 +1,8 @@
-package net.vatri.ecommerce.config;
+package proto.config;
 
-import net.vatri.ecommerce.security.AuthenticationFailureHandler;
-import net.vatri.ecommerce.security.AuthenticationSuccessHandler;
-import net.vatri.ecommerce.security.TokenAuthenticationFilter;
+import proto.security.AuthenticationFailureHandler;
+import proto.security.AuthenticationSuccessHandler;
+import proto.security.TokenAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

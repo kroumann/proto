@@ -1,4 +1,4 @@
-package net.vatri.ecommerce.models;
+package proto.models;
 
 import org.springframework.security.core.userdetails.UserDetails;
 

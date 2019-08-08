@@ -1,10 +1,10 @@
-package net.vatri.ecommerce.controllers;
+package proto.controllers;
 
-import net.vatri.ecommerce.hateoas.ProductResource;
-import net.vatri.ecommerce.models.Product;
-import net.vatri.ecommerce.models.ProductImage;
-import net.vatri.ecommerce.services.EcommerceService;
-import net.vatri.ecommerce.storage.StorageService;
+import proto.hateoas.ProductResource;
+import proto.models.Product;
+import proto.models.ProductImage;
+import proto.services.EcommerceService;
+import proto.storage.StorageService;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

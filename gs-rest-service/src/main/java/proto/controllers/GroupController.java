@@ -1,8 +1,8 @@
-package net.vatri.ecommerce.controllers;
+package proto.controllers;
 
-import net.vatri.ecommerce.hateoas.GroupResource;
-import net.vatri.ecommerce.models.ProductGroup;
-import net.vatri.ecommerce.services.EcommerceService;
+import proto.hateoas.GroupResource;
+import proto.models.ProductGroup;
+import proto.services.EcommerceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.ResourceSupport;
 import org.springframework.validation.Validator;
