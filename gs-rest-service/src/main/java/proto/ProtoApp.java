@@ -1,6 +1,10 @@
 package proto;
 
 
+import static proto.ProtoConstants.CSS_PATH;
+import static proto.ProtoConstants.HEIGHT;
+import static proto.ProtoConstants.PROJECT_TITLE;
+import static proto.ProtoConstants.WIDTH;
 /*
 import proto.cache.Cache;
 import proto.cache.RedisCache;
@@ -24,13 +28,68 @@ import redis.clients.jedis.Jedis;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication //(scanBasePackages={"proto"})
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+@SpringBootApplication (scanBasePackages={"proto"})
 //@EnableConfigurationProperties(StorageProperties.class)
-public class Application {
+public class ProtoApp extends Application {
+
+    private ConfigurableApplicationContext springContext;
+
+    private static final Logger log = LoggerFactory.getLogger(ProtoApp.class);
+    private Scene scene;
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        launch(ProtoApp.class, args);
+        //SpringApplication.run(ProtoApp.class, args);
     }
+
+    @Override
+    public void init() throws Exception {
+        springContext = SpringApplication.run(ProtoApp.class);
+    }
+
+    @Override
+    public void stop() throws Exception {
+        springContext.stop();
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        startApplication(stage);
+    }
+
+    private void startApplication(final Stage primaryStage) throws Exception {
+        log.info("Starting {}!", PROJECT_TITLE);
+
+        FXMLLoader loader = new FXMLLoader(ProtoApp.class.getResource("/view/ProtoController.fxml"));
+        AnchorPane page = (AnchorPane) loader.load();
+        Scene scene = new Scene(page);
+        scene.getStylesheets().add("/view/proto.css");
+		primaryStage.setTitle(PROJECT_TITLE);
+		primaryStage.setHeight(HEIGHT);
+		primaryStage.setWidth(WIDTH);
+		primaryStage.centerOnScreen();
+		primaryStage.setOnCloseRequest(e -> {
+			Platform.exit();
+			System.exit(0);
+		});
+		primaryStage.setScene(scene);
+		primaryStage.show();
+	}
+
+
 
     /*
     @Bean
