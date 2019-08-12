@@ -73,6 +73,7 @@ public class AuthenticationController {
         String jws = tokenHelper.generateToken( user.getUsername(), device);
         int expiresIn = tokenHelper.getExpiredIn(device);
         // Return the token
+        //System.out.println("user info: " + user.getFirstName() + " " + user.getLastName());
         return ResponseEntity.ok(new UserTokenState(jws, expiresIn));
     }
 

@@ -71,12 +71,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception{
 
         http
-                .exceptionHandling().authenticationEntryPoint( restAuthenticationEntryPoint ).and()
                 .sessionManagement().sessionCreationPolicy( SessionCreationPolicy.STATELESS ).and()
+                .exceptionHandling().authenticationEntryPoint( restAuthenticationEntryPoint ).and()
 //                .addFilterBefore(jwtAuthenticationTokenFilter(), BasicAuthenticationFilter.class)
                 .authorizeRequests()
                 .antMatchers(
                             HttpMethod.GET,
+                            "/",
+                            "/auth/**",
+                            "/webjars/**",
+                            "/*.html",
+                            "/favicon.ico",
+                            "/**/*.html",
+                            "/**/*.css",
+                            "/**/*.js"/*,
                             "/product/image/**",
                             "/product/**",
                             "/category/image/**",
@@ -84,8 +92,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                             "/cart/**",
                             "/v2/**",
                             "/swagger-ui.html",
-                            "/webjars/**",
-                            "/swagger-resources/**").permitAll()
+                            "/greeting/**",
+                            "/swagger-resources/**"*/).permitAll()
                             .antMatchers("/auth/**").permitAll()
                             .anyRequest().authenticated().and()
                             .addFilterBefore(new TokenAuthenticationFilter(tokenHelper, jwtUserDetailsService), BasicAuthenticationFilter.class);
@@ -102,6 +110,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         );
         web.ignoring().antMatchers(
                 HttpMethod.GET,
+                "/",
+                "/webjars/**",
+                "/*.html",
+                "/favicon.ico",
+                "/**/*.html",
+                "/**/*.css",
+                "/**/*.js"/*,
                 "/product/image/**",
                 "/product/**",
                 "/category/image/**",
@@ -109,8 +124,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 "/cart/**",
                 "/v2/**",
                 "/swagger-ui.html",
-                "/webjars/**",
-                "/swagger-resources/**"
+                "/swagger-resources/**",
+                "/greeting/**"*/
             );
 
     }

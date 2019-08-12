@@ -1,13 +1,14 @@
 package proto;
 
 
-//import proto.cache.Cache;
-//import proto.cache.RedisCache;
-//import proto.storage.StorageProperties;
-//import proto.storage.StorageService;
-//import proto.validators.GroupValidator;
-//import proto.validators.OrderValidator;
-//import proto.validators.ProductValidator;
+/*
+import proto.cache.Cache;
+import proto.cache.RedisCache;
+import proto.storage.StorageProperties;
+import proto.storage.StorageService;
+import proto.validators.GroupValidator;
+import proto.validators.OrderValidator;
+import proto.validators.ProductValidator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,11 +20,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.orm.jpa.vendor.HibernateJpaSessionFactoryBean;
 import org.springframework.validation.Validator;
 import redis.clients.jedis.Jedis;
-
-//import org.springframework.boot.SpringApplication;
+*/
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages={"proto"})
+@SpringBootApplication //(scanBasePackages={"proto"})
 //@EnableConfigurationProperties(StorageProperties.class)
 public class Application {
 
