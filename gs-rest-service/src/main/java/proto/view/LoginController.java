@@ -5,6 +5,8 @@ import java.util.logging.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 
+https://gist.github.com/jewelsea/4631319
+
 /** Manages control flow for logins */
 public class LoginController {
   private Scene scene;
