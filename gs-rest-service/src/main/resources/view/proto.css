@@ -2,3 +2,56 @@
     -fx-background-color: red;
     -fx-text-fill: white;
 }
+
+.hbox {
+    -fx-background-color: #2196f3;  /* #2f4f4f; */
+    -fx-padding: 5;
+    -fx-spacing: 10;
+}
+
+.vbox {
+    -fx-background-color: #2196f3;  /* #2f4f4f; */
+    -fx-padding: 5;
+    -fx-spacing: 10;
+}
+
+.mbox {
+    -fx-background-color: #EDE7F6;
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+
+.tabpane {
+    -fx-background-color: #2196f3;
+}
+
+
+.login-icon {
+    -fx-graphic: url("/gs-rest-service/src/main/resources/view/images/user-icon.png");
+}
+
+.login-box {
+    -fx-background-color: WHITE;
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-padding: 8;
+}
+
+
+.login-field {
+    -fx-font-name: "Roboto Medium";
+    -fx-font-size: 14.0px;
+}
+
+.login-btn {
+    -fx-background-color: #2196f3;
+}
+
+.user-info {
+    -fx-text-fill: #EDE7F6;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-background-color: transparent;
+}

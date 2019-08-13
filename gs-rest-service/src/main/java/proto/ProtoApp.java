@@ -41,6 +41,10 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import proto.view.LoginController;
+
+//webview for infos browser
+//https://edvin.gitbooks.io/tornadofx-guide/part1/7.%20Layouts%20and%20Menus.html
 
 @SpringBootApplication (scanBasePackages={"proto"})
 //@EnableConfigurationProperties(StorageProperties.class)
@@ -77,17 +81,19 @@ public class ProtoApp extends Application {
         FXMLLoader loader = new FXMLLoader(ProtoApp.class.getResource("/view/Login.fxml"));
         AnchorPane page = (AnchorPane) loader.load();
         Scene scene = new Scene(page);
+        LoginController lgController = loader.<LoginController>getController();
+        lgController.initManager();
         //scene.getStylesheets().add("/view/proto.css");
 		primaryStage.setTitle(PROJECT_TITLE);
-		//primaryStage.setHeight(HEIGHT);
-		//primaryStage.setWidth(WIDTH);
+		primaryStage.setHeight(HEIGHT);
+		primaryStage.setWidth(WIDTH);
 		primaryStage.centerOnScreen();
 		primaryStage.setOnCloseRequest(e -> {
 			Platform.exit();
 			System.exit(0);
 		});
         primaryStage.setScene(scene);
-        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        //primaryStage.initStyle(StageStyle.TRANSPARENT);
 		primaryStage.show();
 	}
 
