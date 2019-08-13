@@ -40,6 +40,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 @SpringBootApplication (scanBasePackages={"proto"})
 //@EnableConfigurationProperties(StorageProperties.class)
@@ -73,19 +74,20 @@ public class ProtoApp extends Application {
     private void startApplication(final Stage primaryStage) throws Exception {
         log.info("Starting {}!", PROJECT_TITLE);
 
-        FXMLLoader loader = new FXMLLoader(ProtoApp.class.getResource("/view/ProtoController.fxml"));
+        FXMLLoader loader = new FXMLLoader(ProtoApp.class.getResource("/view/Login.fxml"));
         AnchorPane page = (AnchorPane) loader.load();
         Scene scene = new Scene(page);
-        scene.getStylesheets().add("/view/proto.css");
+        //scene.getStylesheets().add("/view/proto.css");
 		primaryStage.setTitle(PROJECT_TITLE);
-		primaryStage.setHeight(HEIGHT);
-		primaryStage.setWidth(WIDTH);
+		//primaryStage.setHeight(HEIGHT);
+		//primaryStage.setWidth(WIDTH);
 		primaryStage.centerOnScreen();
 		primaryStage.setOnCloseRequest(e -> {
 			Platform.exit();
 			System.exit(0);
 		});
-		primaryStage.setScene(scene);
+        primaryStage.setScene(scene);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
 		primaryStage.show();
 	}
 

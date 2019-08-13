@@ -1,61 +1,41 @@
 package proto.view;
 
-import java.io.IOException;
-import java.util.logging.*;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.*;
+import java.awt.Button;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
-https://gist.github.com/jewelsea/4631319
+/**
+ *
+ * @author danml
+ */
+public class LoginController implements Initializable {
+    
+    @FXML
+    private Label label;
 
-/** Manages control flow for logins */
-public class LoginController {
-  private Scene scene;
-
-  public LoginController(Scene scene) {
-    this.scene = scene;
-  }
-
-  /**
-   * Callback method invoked to notify that a user has been authenticated.
-   * Will show the main application screen.
-   */
-  public void authenticated(String sessionID) {
-    showMainView(sessionID);
-  }
-
-  /**
-   * Callback method invoked to notify that a user has logged out of the main application.
-   * Will show the login application screen.
-   */
-  public void logout() {
-    showLoginScreen();
-  }
-
-  public void showLoginScreen() {
-    try {
-      FXMLLoader loader = new FXMLLoader(
-        getClass().getResource("login.fxml")
-      );
-      scene.setRoot((Parent) loader.load());
-      LoginController controller =
-        loader.<LoginController>getController();
-      controller.initManager(this);
-    } catch (IOException ex) {
-      Logger.getLogger(LoginManager.class.getName()).log(Level.SEVERE, null, ex);
+    @FXML
+    private Button closeButton;
+    
+    @FXML
+    public void handleButtonAction(ActionEvent event) {
+        System.out.println("You clicked me!");
+        label.setText("Hello World!");
     }
-  }
-
-  private void showMainView(String sessionID) {
-    try {
-      FXMLLoader loader = new FXMLLoader(
-        getClass().getResource("mainview.fxml")
-      );
-      scene.setRoot((Parent) loader.load());
-      MainViewController controller =
-        loader.<MainViewController>getController();
-      controller.initSessionID(this, sessionID);
-    } catch (IOException ex) {
-      Logger.getLogger(LoginManager.class.getName()).log(Level.SEVERE, null, ex);
+    
+    @FXML
+    public void handleCloseButton(ActionEvent e) {
+     // Stage stage = (Stage) closeButton.getScene().getWindow();
+      // stage.close();
     }
-  }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+    
 }

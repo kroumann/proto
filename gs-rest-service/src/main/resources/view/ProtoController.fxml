@@ -10,6 +10,22 @@
             fx:controller="proto.view.ProtoController"
             prefHeight="400.0" prefWidth="600.0">
     <children>
+        <BorderPane prefHeight="443.0" prefWidth="912.0" styleClass="body">
+            <top>
+                <Pane prefHeight="123.0" prefWidth="843.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="102.0" fitWidth="113.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/user-icon.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="250.0" layoutY="25.0" styleClass="title-text" text="ADMINISTRACIÓN DE CLIENTES" />
+                    </children>
+                </Pane>
+            </top>
+
+            <center>
+            </center>
 
         <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.leftAnchor="10.0"
               AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">

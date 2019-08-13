@@ -167,7 +167,7 @@ public class AdminPanel extends JPanel {
                     ex.printStackTrace();
                 }
                 
-                System.out.println("Donnee brute:" + category.getName() + ", " + category.getDescription() );
+                //System.out.println("Donnee brute:" + category.getName() + ", " + category.getDescription() );
 
                 JPanel catInfos = new JPanel(new BorderLayout());
                 catInfos.setPreferredSize(new Dimension(80, 40));
