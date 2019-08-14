@@ -10,4 +10,8 @@ public class ProtoConstants {
 	public static final Double HEIGHT = Screen.getPrimary().getVisualBounds().getHeight() / 1.5;
 	public static final Double WIDTH = Screen.getPrimary().getVisualBounds().getWidth() / 1.5;
 
+	static final String API_BASE_URL = "https://localhost:8080/";
+    //static final String API_VERSION_SPEC = "application/vnd.github.v3+json";
+    static final String JSON_CONTENT_TYPE = "application/json";
+
 }

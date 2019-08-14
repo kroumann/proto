@@ -34,7 +34,7 @@ import proto.ProtoApp;
 import org.springframework.stereotype.Component;
 
 @Component
-public class LoginController {
+public class LoginController implements Initializable {
 
     @FXML
     private JFXTextField loginTxtField;
@@ -46,9 +46,10 @@ public class LoginController {
     private JFXButton loginBtn;
 
     @FXML
-    private JButton exitBtn;
+    private JFXButton exitBtn;
 
-    private void hdlLoginButton() {
+    @FXML
+    private void hdlLoginButton(ActionEvent event) {
       Stage primStage = (Stage) loginBtn.getScene().getWindow();
 
       try {
@@ -73,17 +74,13 @@ public class LoginController {
       }
     }
 
-    @FXML
-    public void initialize() {
-        //
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+
     }
 
 
     public void initManager() {
-        loginBtn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent event) {
-              hdlLoginButton();
-              }
-            });
+        
     }
 }
