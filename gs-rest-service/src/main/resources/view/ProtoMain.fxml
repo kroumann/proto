@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -8,16 +11,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="proto.view.ProtoController">
   <children>
     <SplitPane dividerPositions="0.21548821548821548" focusTraversable="true" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
       <items>
         <BorderPane maxWidth="-Infinity" minWidth="125.0" prefHeight="394.0" prefWidth="125.0" styleClass="hbox">
           <bottom>
-            <Button contentDisplay="CENTER" mnemonicParsing="false" prefWidth="114.0" text="Logout" />
+            <JFXButton fx:id="logoutBtn" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="114.0"  styleClass="button" text="Logout"/>
           </bottom>
           <center>
-            <TextField prefHeight="137.0" prefWidth="115.0" styleClass="user-info" text="" />
+            <JFXTextField fx:id= "userInfosField" prefHeight="137.0" prefWidth="115.0" styleClass="user-info" text="" />
           </center>
           <stylesheets>
             <URL value="@proto.css" />
@@ -37,22 +40,22 @@
                 <URL value="@proto.css" />
               </stylesheets>
               <tabs>
-                <Tab text="Admin">
+                <Tab text="Admin" fx:id="adminPane">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>
                 </Tab>
-                <Tab text="Commandes">
+                <Tab text="Commandes" fx:id="commandPane">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>
                 </Tab>
-                <Tab text="Stock">
+                <Tab text="Stock" fx:id="stockPane">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>
                 </Tab>
-                <Tab text="Compta">
+                <Tab text="Compta" fx:id="comptaPane">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>

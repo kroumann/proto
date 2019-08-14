@@ -45,7 +45,7 @@ import proto.view.LoginController;
 
 //webview for infos browser
 //https://edvin.gitbooks.io/tornadofx-guide/part1/7.%20Layouts%20and%20Menus.html
-//retrofit 
+//retrofit
 //https://square.github.io/retrofit/
 //https://auth0.com/blog/developing-a-restful-client-with-retrofit-and-spring-boot/
 
@@ -82,6 +82,7 @@ public class ProtoApp extends Application {
         log.info("Starting {}!", PROJECT_TITLE);
 
         FXMLLoader loader = new FXMLLoader(ProtoApp.class.getResource("/view/Login.fxml"));
+        loader.setControllerFactory(springContext::getBean);
         AnchorPane page = (AnchorPane) loader.load();
         Scene scene = new Scene(page);
         //LoginController lgController = loader.<LoginController>getController();

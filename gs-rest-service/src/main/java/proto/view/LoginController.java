@@ -23,15 +23,19 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import javafx.scene.Parent;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.StageStyle;
 import proto.ProtoApp;
+import proto.models.User;
+import proto.services.UserService;
 
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 @Component
 public class LoginController implements Initializable {
@@ -48,15 +52,22 @@ public class LoginController implements Initializable {
     @FXML
     private JFXButton exitBtn;
 
+    @Autowired
+    private UserService userService;
+
     @FXML
     private void hdlLoginButton(ActionEvent event) {
       Stage primStage = (Stage) loginBtn.getScene().getWindow();
 
+      User user  = this.userService.findByUsername(loginTxtField.getText());
+      System.out.println("found user:" + user.getFirstName() + " " + user.getLastName());
+
       try {
             FXMLLoader loader = new FXMLLoader(ProtoApp.class.getResource("/view/ProtoMain.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            //AnchorPane page = (AnchorPane) loader.load();
+            Parent page = (Parent) loader.load();
+            ProtoController protoController = loader.getController();
             Scene scene = new Scene(page);
-            //scene.getStylesheets().add("/view/proto.css");
     		primStage.setTitle(PROJECT_TITLE);
     		primStage.setHeight(HEIGHT);
     		primStage.setWidth(WIDTH);
@@ -66,7 +77,9 @@ public class LoginController implements Initializable {
     			System.exit(0);
     		});
             primStage.setScene(scene);
-            primStage.initStyle(StageStyle.TRANSPARENT);
+            //primStage.initStyle(StageStyle.TRANSPARENT);
+            //ProtoController protoController = loader.getController();
+            protoController.setUserInfos(user);
     		primStage.show();
           // stage.close();
       } catch (Exception e){
@@ -80,7 +93,8 @@ public class LoginController implements Initializable {
     }
 
 
-    public void initManager() {
-        
+    public void showUserInfo(User user) {
+
+
     }
 }
